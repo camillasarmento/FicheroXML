@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--1. Base de Datos
+Debe incluir configuraciones para el host, puerto, nombre de la
+ base de datos, usuario, y contraseña.
+2. Servidor Web
+Define parámetros para el puerto de escucha del servidor,
+habilitación de SSL,rutas a los archivos de clave privada
+y certificado, el número máximo de conexiones
+        simultáneas permitidas y el tiempo de espera de la conexión.
+3. Logging
+Especifica la configuración para la creación de archivos de log.
+        Incluye el nivel de log (info, error, debug) y
+         la ruta al archivo donde se almacenarán los logs.-->
+
+<configuracion>
+    <!--Base de datos-->
+    <base_de_datos>
+        <host>localhost</host>
+        <puerto>3000</puerto>
+        <nombre>Base de datos</nombre>
+        <usuario>usuarioDatos</usuario>
+        <contraseña>1234</contraseña>
+    </base_de_datos>
+
+    <!--Servidor Web-->
+    <servidor_web>
+        <puerto>8080</puerto>
+        <ssl habilitado="true">
+    <clave>path/a/clave.key</clave>
+    <certificado>path/a/certificado.crt</certificado>
+    </ssl>
+        <max_conexiones>50</max_conexiones>
+        <timeout>4000</timeout>
+    </servidor_web>
+
+    <!--Logging-->
+    <configuraciones_adicionales>
+        <modo_debug>activado</modo_debug>
+        <log_direccion>logs/aplicacion.log</log_direccion>
+    </configuraciones_adicionales>
+</configuracion>
